@@ -1,0 +1,102 @@
+body {
+    margin: 0;
+    /* feel free to change/customize this gradient and font */
+    background: linear-gradient(135deg, #ffafbd 0%, #ffc3a0 100%);
+    /* feel free to change/customize font */
+    font-family: 'Arial', sans-serif;
+}
+
+.flex-container {
+    display: flex;
+    width: 100vw;
+    height: 50vh;
+    background-color: #ffafbd;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    /* Make this into a flexbox using display: flex */
+    /* Use flexbox properties to stack your tiles vertically and center them */
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100px;
+    width: 100%;
+    height: auto;
+}
+.item{
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+    background-color: #ffafbd;
+}
+
+
+.flex-tile {
+    display: flex;
+    width: 40%;
+    height: 70vh;
+    margin: 5%;
+    padding: 20px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: pink;
+    text-align: center; 
+    gap: 20px;/* Center all text inside the tile */
+}
+
+button {
+    background-color: #ffafbd;
+    color: #333;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #ffc3a0;
+    color: #fff;
+    transform: scale(1.08);
+}
+
+button:active {
+    background-color: #4caf50; /* Green */
+    color: #fff;
+}
+
+@keyframes bounce {
+    0%   { transform: translateY(0); }
+    30%  { transform: translateY(-20px); }
+    50%  { transform: translateY(0); }
+    70%  { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+/* Example: Apply bounce animation to buttons on hover */
+button:hover {
+    background-color: #ffc3a0;
+    color: #fff;
+    transform: scale(1.08);
+    animation: bounce 0.6s;
+}
+    /* Make this into a flexbox using display: flex */
+    /* Use flexbox properties to stack elements in your tiles vertically and center them */
+
+    /* setting the width for each tile */
+    
+
+    /* spacing tiles */
+    
+
+    /* background color for tile, feel free to change */
+  
+}
+
+
+
