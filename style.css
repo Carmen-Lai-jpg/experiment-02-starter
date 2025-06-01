@@ -1,7 +1,7 @@
 body {
     margin: 0;
     /* feel free to change/customize this gradient and font */
-    background-color: #edcf10;
+    background: linear-gradient(135deg, #edcf10 0%, rgb(255, 166, 0) 100%); 
     /* feel free to change/customize font */
     font-family: 'Arial', sans-serif;
 }
@@ -15,9 +15,10 @@ h1{
 .flex-container {
     display: flex;
     width: 100vw;
-    background-color: #edcf10;
+    background-color: #b6ed10;
     justify-content: center;
     align-items: center;
+    margin-top: 20px;
     /* Make this into a flexbox using display: flex */
     /* Use flexbox properties to stack your tiles vertically and center them */
 }
@@ -29,9 +30,14 @@ img {
     max-width: 100px;
     width: 100%;
     height: auto;
+    transition: transform 0.6s, filter 0.6s;
+    filter: brightness(0.95) contrast(1.1) saturate(1.2);
 }
+
 img:hover{
 animation: imgborder 0.5s;
+transform: rotate(10deg);
+filter: brightness(1.5) contrast(1.7) saturate(1.9);
 }
 .item{
     width: 100px;
@@ -43,6 +49,7 @@ animation: imgborder 0.5s;
 .flex-tile {
     display: flex;
     width: 40%;
+    height: 375px;
     margin: 5%;
     padding: 20px;
     flex-direction: column;
@@ -57,7 +64,17 @@ animation: imgborder 0.5s;
 .flex-tile:hover{
  animation: scale 0.6s;
 }
-
+.content{
+    height: 200px;
+}
+#contentbutton{
+    text-align: center;
+    margin: 30px;
+}
+#contentbutton a{
+    text-decoration: none;
+    color: darkgreen;
+}
 button {
     background-color: greenyellow;
     color: darkgreen;
@@ -93,13 +110,19 @@ button:active {
 }
 
 @keyframes imgborder {
-    0%   { border: 2px solid blue; }
-    30%  { border: 2px solid cyan; }
-    50%  { border: 2px solid purple; }
-    70%  { border: 2px solid magenta; }
-    100% { border: 2px solid blue; }
+    0%   { border: 2px solid blue; transform: rotateX(0); }
+    30%  { border: 2px solid cyan; transform: rotateX(5deg);}
+    50%  { border: 2px solid purple; transform: rotateX(10deg);}
+    70%  { border: 2px solid magenta; transform: rotateX(5deg);}
+    100% { border: 2px solid blue; transform: rotateX(0); }
 }
-
+@keyframes font-size {
+    0%   { font-size: 12pt; }
+    30%  { font-size: 14pt; }
+    50%  { font-size: 16pt; }
+    70%  { font-size: 14pt; }
+    100% { font-size: 12pt; }
+}
 /* Example: Apply bounce animation to buttons on hover */
 button:hover {
     background-color: darkgreen;
@@ -128,9 +151,12 @@ button:hover {
     
 }
 
-.links a{
+.links a {
     color: red;
+   
 }
-
+.links a:hover{
+     animation: font-size 0.2s;
+}
 
 

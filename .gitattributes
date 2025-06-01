@@ -1,2 +1,5 @@
+git add <Project 2>
+git commit -m "Update <Project 2>
+git push
 # Auto detect text files and perform LF normalization
 * text=auto
